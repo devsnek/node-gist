@@ -1,11 +1,16 @@
 {
-  "name": "node-gist",
+  "name": "gist",
   "version": "1.0.0",
   "description": "create gists quickly and easily",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Gus Caplan <me@gus.host>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GusCaplan/node-gist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GusCaplan/node-gist/issues"
+  },
+  "homepage": "https://github.com/GusCaplan/node-gist#readme"
 }
