@@ -1,0 +1,11 @@
+{
+  "name": "node-gist",
+  "version": "1.0.0",
+  "description": "create gists quickly and easily",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gus Caplan <me@gus.host>",
+  "license": "MIT"
+}
