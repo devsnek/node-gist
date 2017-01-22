@@ -5,6 +5,11 @@ module.exports = function (files, options) {
   return new Promise(function (resolve, reject) {
     options = options || { public: true, description: '' };
     if (typeof files === 'string') files = { 'default': {'content': files} };
+    if (Array.isArray(files)) {
+      const final = {};
+      for (const file of files) final[file.name] = { content: file.content };
+      files = final;
+    }
 
     const body = {
       files: files,
