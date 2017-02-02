@@ -2,7 +2,7 @@
 const http = require('https');
 
 module.exports = function (files, options) {
-  return new Promise(function (resolve, reject) {
+  return new Promise((resolve, reject) => {
     options = options || { public: true, description: '' };
     if (typeof files === 'string') files = { 'default': {'content': files} };
     if (Array.isArray(files)) {
@@ -12,7 +12,7 @@ module.exports = function (files, options) {
     }
 
     const body = {
-      files: files,
+      files,
       description: options.description,
       public: options.public
     };
@@ -26,13 +26,13 @@ module.exports = function (files, options) {
         'User-Agent': 'node-gist',
         'Content-Type': 'application/json'
       }
-    }, function (res) {
+    }, (res) => {
       res.body = '';
       res.setEncoding('utf8');
-      res.on('data', function (chunk) {
+      res.on('data', (chunk) => {
         res.body += chunk;
       });
-      res.on('end', function () {
+      res.on('end', () => {
         try {
           resolve(JSON.parse(res.body));
         } catch (err) {
