@@ -1,9 +1,9 @@
 {
-  "name": "gist",
+  "name": "snekgist",
   "version": "1.0.0",
   "description": "create gists quickly and easily",
   "main": "index.js",
-  "author": "Gus Caplan <me@gus.host>",
+  "author": "snek <me@gus.host>",
   "license": "MIT",
   "repository": {
     "type": "git",
