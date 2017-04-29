@@ -1,9 +1,8 @@
 'use strict';
 const http = require('https');
 
-module.exports = function (files, options) {
+module.exports = function gist(files, options = { public: true, description: '' }) {
   return new Promise((resolve, reject) => {
-    options = options || { public: true, description: '' };
     if (typeof files === 'string') files = { 'default': {'content': files} };
     if (Array.isArray(files)) {
       const final = {};
