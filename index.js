@@ -1,5 +1,5 @@
 'use strict';
-const http = require('https');
+const https = require('https');
 
 module.exports = function gist(files, options = { public: true, description: '' }) {
   return new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@ module.exports = function gist(files, options = { public: true, description: '' 
       public: options.public
     };
 
-    const req = http.request({
+    const req = https.request({
       host: 'api.github.com',
       port: 443,
       path: '/gists',
